@@ -39,6 +39,23 @@ body {
   background-color: var(--color-surface);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Prevent zoom on mobile when focusing inputs */
+  touch-action: manipulation;
+}
+
+/* Prevent mobile zoom on all inputs and textareas */
+input,
+textarea,
+select {
+  font-size: 16px !important;
+  touch-action: manipulation;
+}
+
+/* Prevent zoom on Vapi widget inputs */
+vapi-widget input,
+vapi-widget textarea {
+  font-size: 16px !important;
+  touch-action: manipulation;
 }
 
 /* Chat Container - Full Screen Focus */
