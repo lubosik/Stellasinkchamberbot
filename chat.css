@@ -1,0 +1,346 @@
+/* Stella's Ink Chamber Chat Page Styles */
+:root {
+  --color-primary: #29391E;
+  --color-surface: #ffffff;
+  --color-text: #333333;
+  --color-text-light: #666666;
+  --color-on-primary: #ffffff;
+  --color-border: #e5e5e5;
+  --color-accent: #14B8A6;
+  
+  --font-primary: 'Libre Baskerville', serif;
+  --font-secondary: 'Source Sans Pro', sans-serif;
+  
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Chat Container - Full Screen Focus */
+.chat-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+/* Compact Header */
+.chat-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-md) var(--space-lg);
+  flex-shrink: 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  border-radius: var(--radius-sm);
+}
+
+.header-text h1 {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.header-text p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+/* Main Chat Area - Full Screen */
+.chat-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 120px); /* Full height minus header and help strip */
+  margin: 0;
+  padding: var(--space-lg);
+  position: relative;
+}
+
+/* Chat CTA Container - Centered */
+.chat-cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Chat CTA Button - Large and Prominent */
+.chat-cta-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-xxl) 64px;
+  background: var(--color-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 40px rgba(20, 184, 166, 0.35),
+              0 4px 12px rgba(20, 184, 166, 0.2);
+  min-width: 400px;
+  max-width: 500px;
+}
+
+.chat-cta-button:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 48px rgba(20, 184, 166, 0.45),
+              0 8px 20px rgba(20, 184, 166, 0.3);
+  background: #16cdb5;
+}
+
+.chat-cta-button:active {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 12px 40px rgba(20, 184, 166, 0.4);
+}
+
+.cta-icon {
+  font-size: 4rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+}
+
+.cta-text {
+  font-family: var(--font-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta-subtitle {
+  font-family: var(--font-secondary);
+  font-size: 1.05rem;
+  font-weight: 400;
+  opacity: 0.95;
+  letter-spacing: 0.02em;
+}
+
+/* Minimal Help Strip */
+.help-strip {
+  background: #f8f9fa;
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-sm) var(--space-lg);
+  flex-shrink: 0;
+}
+
+.help-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: 0.8rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--color-text-light);
+}
+
+.help-content a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.help-content a:hover {
+  text-decoration: underline;
+}
+
+/* Noscript Fallback */
+.noscript-fallback {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin: var(--space-lg) 0;
+  text-align: center;
+}
+
+.noscript-fallback h2 {
+  color: #856404;
+  margin: 0 0 var(--space-md) 0;
+  font-family: var(--font-primary);
+}
+
+.noscript-fallback p {
+  color: #856404;
+  margin: 0 0 var(--space-lg) 0;
+}
+
+.fallback-links {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.fallback-link {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.fallback-link:hover {
+  background: #1e2a13;
+  text-decoration: none;
+}
+
+.fallback-link.whatsapp {
+  background: #25d366;
+}
+
+.fallback-link.whatsapp:hover {
+  background: #1da851;
+}
+
+/* Focus Styles for Accessibility */
+a:focus,
+button:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .chat-header {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .header-content {
+    gap: var(--space-sm);
+  }
+
+  .logo {
+    height: 35px;
+  }
+
+  .header-text h1 {
+    font-size: 1.25rem;
+  }
+
+  .header-text p {
+    font-size: 0.8rem;
+  }
+
+  .chat-main {
+    height: calc(100vh - 100px); /* Adjust for smaller header */
+    padding: var(--space-md);
+  }
+
+  .chat-cta-button {
+    min-width: 300px;
+    max-width: 90vw;
+    padding: var(--space-xl) var(--space-xxl);
+  }
+
+  .cta-icon {
+    font-size: 3rem;
+  }
+
+  .cta-text {
+    font-size: 1.4rem;
+  }
+
+  .cta-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .help-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-xs);
+    font-size: 0.75rem;
+  }
+
+  .fallback-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-text h1 {
+    font-size: 1.1rem;
+  }
+
+  .chat-main {
+    height: calc(100vh - 90px);
+    padding: var(--space-sm);
+  }
+
+  .chat-cta-button {
+    min-width: 280px;
+    padding: var(--space-lg) var(--space-xl);
+    gap: var(--space-sm);
+  }
+
+  .cta-icon {
+    font-size: 2.5rem;
+  }
+
+  .cta-text {
+    font-size: 1.2rem;
+    letter-spacing: 0.06em;
+  }
+
+  .cta-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .help-strip {
+    padding: var(--space-xs) var(--space-sm);
+  }
+}
+
+/* Vapi SDK button will be positioned by the SDK itself at bottom-right */
+/* We don't need to override its positioning */

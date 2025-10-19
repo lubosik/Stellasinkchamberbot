@@ -1,0 +1,32 @@
+{
+  "colors": {
+    "primary": "#29391E",
+    "surface": "#ffffff",
+    "text": "#333333",
+    "text-light": "#666666",
+    "on-primary": "#ffffff",
+    "border": "#e5e5e5",
+    "accent": "#14B8A6"
+  },
+  "fonts": {
+    "primary": "'Libre Baskerville', serif",
+    "secondary": "'Source Sans Pro', sans-serif"
+  },
+  "spacing": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "32px",
+    "xxl": "48px"
+  },
+  "radius": {
+    "sm": "4px",
+    "md": "8px",
+    "lg": "12px",
+    "xl": "16px"
+  },
+  "logo": {
+    "url": "https://img1.wsimg.com/isteam/ip/3fb9aab3-ef16-45b5-a899-342b57c5a896/SIC%20logo.jpeg/:/rs=h:100,cg:true,m/qt=q:95"
+  }
+}
